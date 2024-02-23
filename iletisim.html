@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim Formu</title>
+<link rel="stylesheet" href="iletisim.css">
+</head>
+<body>
+
+  <div id="contact-form">
+    <form id="myForm">
+      <div class="form-control">
+        <label for="name">İsim Soyisim:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-control">
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-control">
+        <label for="message">TALEPLERİNİZ VE BİLGİ İÇİN:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Zorunlu Değil"></textarea>
+      </div>
+      <button type="submit" id="submit-btn">Gönder</button>
+    </form>
+    
+
+   
+  </div>
+
+<script>
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+  var message = document.getElementById('message').value;
+
+  var mailBody = 'İsim Soyisim: ' + name + '\nTelefon: ' + phone + '\nAçıklama: ' + message;
+
+  
+  console.log('İsim Soyisim: ' + name);
+  console.log('Telefon: ' + phone);
+  console.log('Açıklama: ' + message);
+});
+</script>
+
+</body>
+</html>
